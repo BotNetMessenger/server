@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package network;
+
+
+service BotNode {
+    rpc GetInfo(Empty) returns (ServerInfo) {}
+    rpc Register(User) returns (Status) {}
+    rpc SendMessage(MessageRequest) returns (Empty) {}
+    rpc GetMessages(GetMessagesRequest) returns (stream Message) {}
+    rpc IsOnline(User) returns (Status) {}
+}
+
+message Empty {}
+
+message ServerInfo {
+    string description = 1;
+}
+
+message User {
+    string name = 1;
+}
+
+message Status {
+    bool value = 1;
+}
+
+message GetMessagesRequest {
+    string name = 1;
+    string lastlogin = 2;
+}
+
+message Message {
+    string sender = 1;
+    string text = 2;
+}
+
+message MessageRequest {
+    string sender = 1;
+    string receiver = 2;
+    string text = 3;
+}
