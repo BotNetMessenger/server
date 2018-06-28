@@ -1,0 +1,15 @@
+arrow==0.12.1
+async-timeout==3.0.0
+asyncpg==0.16.0
+grpcio==1.12.0
+grpcio-tools==1.12.0
+grpclib==0.1.0
+h2==3.0.1
+hpack==3.0.0
+hyperframe==5.1.0
+multidict==4.3.1
+peewee==3.5.0
+protobuf==3.6.0
+psycopg2==2.7.5
+python-dateutil==2.7.3
+six==1.11.0
